@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beaufort Locker — Matthias</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="logo">matthias<span>@</span>portfolio</div><nav><a href="index.html#about">A propos</a><a href="index.html#skills">Competences</a><a href="index.html#projects">Projets</a><a href="index.html#contact">Contact</a></nav></header>
+<main class="project-page">
+  <a class="back-link" href="index.html#projects">&larr; Retour aux projets</a>
+  <p class="eyebrow">Projet personnel</p>
+  <h1>Beaufort Locker</h1>
+  <div class="tag-row"><span class="tag">ESP32</span><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">Raspberry Pi</span></div>
+  <p class="lead">Une solution type "Amazon Locker" pour la distribution automatique de fromages Beaufort AOP.</p>
+  <div class="project-page-grid">
+    <section>
+      <h2>Le projet</h2>
+      <p>Beaufort Locker permet aux clients de commander du fromage en ligne via une interface web publique, puis de retirer leur commande dans un casier physique dedie. Une interface d'administration hebergee localement (sur Raspberry Pi) permet de superviser l'occupation des casiers et de recevoir des alertes en temps reel.</p>
+      <p>Un module ESP32 embarque des capteurs de temperature et d'humidite pour surveiller les conditions de conservation du fromage a l'interieur des casiers, et remonte ces donnees ainsi que des alertes vers le systeme central.</p>
+    </section>
+    <section>
+      <h2>Points techniques</h2>
+      <ul>
+        <li>Interface publique client (commande et suivi de retrait)</li>
+        <li>Tableau de bord de supervision pour l'administration des casiers</li>
+        <li>API PHP et Python recevant les donnees de l'ESP32 (temperature, humidite, alertes)</li>
+        <li>Base de donnees MySQL avec schema, procedures stockees et donnees d'initialisation</li>
+        <li>Firmware ESP32 pour la gestion des capteurs et des alertes</li>
+      </ul>
+    </section>
+  </div>
+</main>
+<footer>&copy; 2026 Matthias - Site construit a la main, sans framework.</footer>
+</body>
+</html>
