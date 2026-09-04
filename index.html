@@ -79,61 +79,91 @@
 <section id="projects">
   <h2>Projets</h2>
 
-  <div class="project">
-    <h3>Homelab personnel</h3>
-    <div class="tag-row">
-      <span class="tag">Proxmox</span><span class="tag">Nginx</span><span class="tag">Cloudflare</span>
-    </div>
+  <details class="project">
+    <summary>
+      <h3>Homelab personnel</h3>
+      <div class="tag-row">
+        <span class="tag">Proxmox</span><span class="tag">Nginx</span><span class="tag">Cloudflare</span>
+      </div>
+    </summary>
+    <div class="project-body">
     <p class="desc">
       Infrastructure auto-hébergée sur serveur Proxmox (i7-14700, 64 Go RAM) : une dizaine de services
       (Jellyfin, Nextcloud, Home Assistant et autres) exposés via reverse proxy Nginx avec SSL Let's Encrypt
       via DNS Cloudflare. Réseau segmenté avec OPNsense et VLANs.
     </p>
-  </div>
-
-  <div class="project">
-    <h3>Jellyfin — Serveur média</h3>
-    <div class="tag-row">
-      <span class="tag">Debian</span><span class="tag">VAAPI</span>
+    <p class="project-more"><strong>En détail :</strong> conception de l'architecture, gestion des VM et conteneurs, supervision des services et maintien des accès sécurisés depuis Internet.</p>
+    <a class="project-link" href="homelab.html">Voir la fiche du projet &rarr;</a>
     </div>
+  </details>
+
+  <details class="project">
+    <summary>
+      <h3>Jellyfin — Serveur média</h3>
+      <div class="tag-row">
+        <span class="tag">Debian</span><span class="tag">VAAPI</span>
+      </div>
+    </summary>
+    <div class="project-body">
     <p class="desc">
       Serveur Jellyfin sur Debian avec transcodage matériel via iGPU Intel (VAAPI) et intégration webhook Discord
     </p>
-  </div>
-
-  <div class="project">
-    <h3>Serveurs de jeu publics — BeamMP, Assetto Corsa et Minecraft</h3>
-    <div class="tag-row">
-      <span class="tag">systemd</span><span class="tag">Linux</span><span class="tag">Réseau public</span>
+    <p class="project-more"><strong>En détail :</strong> installation du service, configuration du transcodage matériel et automatisation des notifications lors du lancement des médias.</p>
+    <a class="project-link" href="jellyfin.html">Voir la fiche du projet &rarr;</a>
     </div>
+  </details>
+
+  <details class="project">
+    <summary>
+      <h3>Serveurs de jeu publics — BeamMP, Assetto Corsa et Minecraft</h3>
+      <div class="tag-row">
+        <span class="tag">systemd</span><span class="tag">Linux</span><span class="tag">Réseau public</span>
+      </div>
+    </summary>
+    <div class="project-body">
     <p class="desc">
       Déploiement et administration de serveurs de jeu publics multi-instances (BeamMP, Assetto Corsa et Minecraft Java),
       configurés en services systemd pour un redémarrage et une gestion fiables, avec exposition réseau
       sécurisée depuis le homelab.
     </p>
-  </div>
-
-  <div class="project">
-    <h3>Home Assistant & domotique</h3>
-    <div class="tag-row">
-      <span class="tag">HAOS</span><span class="tag">ESPHome</span>
+    <p class="project-more"><strong>En détail :</strong> séparation des instances, gestion des démarrages et arrêts, ouverture des ports nécessaires et diagnostic des problèmes de connectivité.</p>
+    <a class="project-link" href="serveurs-jeu.html">Voir la fiche du projet &rarr;</a>
     </div>
+  </details>
+
+  <details class="project">
+    <summary>
+      <h3>Home Assistant & domotique</h3>
+      <div class="tag-row">
+        <span class="tag">HAOS</span><span class="tag">ESPHome</span>
+      </div>
+    </summary>
+    <div class="project-body">
     <p class="desc">
       Déploiement d'une VM Home Assistant derrière un reverse proxy, intégration de
       capteurs ESPHome/BME280, et résolution de problèmes réseau liés à un environnement IPv6-only.
     </p>
-  </div>
-
-  <div class="project">
-    <h3>Réception radio SDR</h3>
-    <div class="tag-row">
-      <span class="tag">OpenWebRX+</span><span class="tag">Python</span><span class="tag">RTL-SDR</span>
+    <p class="project-more"><strong>En détail :</strong> mise en réseau des capteurs, collecte des mesures, exposition HTTPS et recherche de solutions adaptées aux contraintes IPv6.</p>
+    <a class="project-link" href="home-assistant.html">Voir la fiche du projet &rarr;</a>
     </div>
+  </details>
+
+  <details class="project">
+    <summary>
+      <h3>Réception radio SDR</h3>
+      <div class="tag-row">
+        <span class="tag">OpenWebRX+</span><span class="tag">Python</span><span class="tag">RTL-SDR</span>
+      </div>
+    </summary>
+    <div class="project-body">
     <p class="desc">
       Station de réception SDR (SDRplay RSPdx, Nooelec NESDR) avec plusieurs profils configurés (DAB+, AIS,
       aviation, NOAA...).
     </p>
-  </div>
+    <p class="project-more"><strong>En détail :</strong> configuration des récepteurs et des profils d'écoute, déploiement d'une interface web et automatisation de tâches avec Python.</p>
+    <a class="project-link" href="sdr.html">Voir la fiche du projet &rarr;</a>
+    </div>
+  </details>
 
 </section>
 

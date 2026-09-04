@@ -126,11 +126,47 @@ h2 {
 }
 
 .project {
+  display: block;
+  width: 100%;
   background: var(--bg-alt);
   border: 1px solid var(--border);
   border-radius: 8px;
-  padding: 1.5rem;
   margin-bottom: 1.5rem;
+  overflow: hidden;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.project:hover,
+.project[open] {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.project summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 1.5rem;
+}
+
+.project summary::-webkit-details-marker {
+  display: none;
+}
+
+.project summary::after {
+  content: "+";
+  float: right;
+  color: var(--accent-2);
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.project[open] summary::after {
+  content: "-";
+}
+
+.project summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -3px;
 }
 
 .project h3 {
@@ -159,6 +195,101 @@ h2 {
 .project p.desc {
   color: var(--text-dim);
   font-size: 0.95rem;
+}
+
+.project-body {
+  border-top: 1px solid var(--border);
+  padding: 1.2rem 1.5rem 1.5rem;
+}
+
+.project-more {
+  color: var(--text);
+  font-size: 0.9rem;
+  margin-top: 0.8rem;
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.project-page {
+  min-height: calc(100vh - 145px);
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+}
+
+.eyebrow {
+  color: var(--accent-2);
+  font-family: monospace;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.project-page h1 {
+  color: var(--text);
+  font-size: 2.4rem;
+  line-height: 1.2;
+  margin: 0.5rem 0 0.8rem;
+}
+
+.project-page .tag-row {
+  margin-bottom: 1.5rem;
+}
+
+.project-page .lead {
+  color: var(--text-dim);
+  font-size: 1.15rem;
+  max-width: 700px;
+}
+
+.project-page-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(220px, 0.8fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.project-page-grid section {
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+
+.project-page-grid h2 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.project-page-grid p,
+.project-page-grid li {
+  color: var(--text-dim);
+  font-size: 0.95rem;
+}
+
+.project-page-grid p + p {
+  margin-top: 1rem;
+}
+
+.project-page-grid ul {
+  list-style: none;
+}
+
+.project-page-grid li {
+  border-bottom: 1px solid var(--border);
+  padding: 0.7rem 0;
+}
+
+.project-page-grid li::before {
+  content: "▸ ";
+  color: var(--accent-2);
 }
 
 .project .links {
@@ -199,4 +330,6 @@ footer {
   header { flex-direction: column; gap: 0.8rem; }
   nav a { margin: 0 0.6rem; }
   #hero h1 { font-size: 1.6rem; }
+  .project-page h1 { font-size: 1.8rem; }
+  .project-page-grid { grid-template-columns: 1fr; gap: 2.5rem; }
 }

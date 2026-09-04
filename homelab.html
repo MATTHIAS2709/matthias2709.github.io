@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Homelab personnel — Matthias</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="logo">matthias<span>@</span>portfolio</div>
+  <nav>
+    <a href="index.html#about">A propos</a>
+    <a href="index.html#skills">Competences</a>
+    <a href="index.html#projects">Projets</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+</header>
+<main class="project-page">
+  <a class="back-link" href="index.html#projects">&larr; Retour aux projets</a>
+  <p class="eyebrow">Projet personnel</p>
+  <h1>Homelab personnel</h1>
+  <div class="tag-row"><span class="tag">Proxmox</span><span class="tag">Nginx</span><span class="tag">Cloudflare</span></div>
+  <p class="lead">Une infrastructure auto-hebergee concue pour faire tourner une dizaine de services au quotidien.</p>
+  <div class="project-page-grid">
+    <section><h2>Le projet</h2><p>Le homelab repose sur un serveur Proxmox equipe d'un i7-14700 et de 64 Go de RAM. Les services sont repartis entre machines virtuelles et conteneurs selon leurs besoins.</p><p>J'y heberge notamment Jellyfin, Nextcloud et Home Assistant, avec une exposition HTTPS geree par Nginx et Let's Encrypt via les DNS Cloudflare.</p></section>
+    <section><h2>Points techniques</h2><ul><li>Virtualisation Proxmox avec VM et LXC</li><li>Segmentation reseau avec OPNsense et VLANs</li><li>Reverse proxy Nginx et certificats SSL</li><li>Administration Linux et maintenance des services</li></ul></section>
+  </div>
+</main>
+<footer>&copy; 2026 Matthias — Site construit a la main, sans framework.</footer>
+</body>
+</html>
