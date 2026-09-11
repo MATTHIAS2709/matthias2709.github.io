@@ -339,3 +339,199 @@ footer {
   .project-page h1 { font-size: 1.8rem; }
   .project-page-grid { grid-template-columns: 1fr; gap: 2.5rem; }
 }
+/* ============================================================
+   THEME AERO / TECHNOZEN — activé via body.aero-theme
+   Fond sombre conserve, skeuomorphisme "brut" (relief marque,
+   degrades multi-etages, bordures franches, peu de flou)
+   ============================================================ */
+
+body.aero-theme {
+  --bg: #050912;
+  --bg-alt: #0c131e;
+  --border: #1c3a5c;
+  --text: #e4eefa;
+  --text-dim: #93a9c2;
+  --accent: #4fd67a;
+  --accent-2: #29b6f6;
+  --aero-hi: #eaffef;
+  --aero-shadow: #01060c;
+}
+
+body.aero-theme {
+  background:
+    linear-gradient(rgba(5, 9, 18, 0.94), rgba(5, 9, 18, 0.94)),
+    url("background.jpeg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Barre de titre chromee, style Windows Vista/7 */
+body.aero-theme header {
+  background:
+    linear-gradient(180deg, #3a5876 0%, #1c344d 12%, #0e1c2c 50%, #16283c 88%, #0a1522 100%);
+  border-bottom: 2px solid #000;
+  border-top: 1px solid #6f93b5;
+  box-shadow: 0 2px 0 rgba(255, 255, 255, 0.06) inset, 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+body.aero-theme header .logo {
+  text-shadow: 0 1px 0 #000, 0 0 6px rgba(41, 182, 246, 0.5);
+}
+body.aero-theme header .logo span { color: var(--accent-2); }
+
+body.aero-theme nav a { text-shadow: 0 1px 0 #000; }
+body.aero-theme nav a:hover { color: var(--aero-hi); }
+
+/* Boutons "bonbon" bombes, degrades francs a paliers, gros highlight */
+body.aero-theme .btn {
+  background: linear-gradient(
+    180deg,
+    #d4ffcf 0%,
+    #8fe58a 8%,
+    #3fb84f 46%,
+    #268a38 50%,
+    #2e9c42 54%,
+    #3fb84f 92%,
+    #a2eea0 100%
+  );
+  color: #062b0c;
+  font-weight: 700;
+  border: 1px solid #185c22;
+  border-radius: 16px;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    inset 0 -2px 3px rgba(10, 45, 15, 0.5),
+    0 1px 0 #0e3d18,
+    0 5px 0 var(--aero-shadow),
+    0 8px 14px rgba(0, 0, 0, 0.55);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.55);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.08s ease, box-shadow 0.08s ease;
+}
+body.aero-theme .btn::before {
+  content: "";
+  position: absolute;
+  top: 4%;
+  left: 5%;
+  right: 5%;
+  height: 38%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0));
+  border-radius: 12px;
+  pointer-events: none;
+}
+body.aero-theme .btn:hover { filter: brightness(1.06); }
+body.aero-theme .btn:active {
+  transform: translateY(4px);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.7),
+    inset 0 2px 6px rgba(0, 20, 35, 0.6),
+    0 1px 0 var(--aero-shadow);
+}
+body.aero-theme .btn.secondary {
+  background: linear-gradient(180deg, #2c3f52 0%, #16222e 50%, #0e1720 100%);
+  color: var(--text);
+  border: 1px solid #0a1a28;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.18),
+    0 1px 0 #29486a,
+    0 5px 0 var(--aero-shadow),
+    0 8px 14px rgba(0, 0, 0, 0.5);
+}
+
+/* Panneaux "plastique/metal brosse", relief net, pas de flou */
+body.aero-theme .skill-card,
+body.aero-theme .project,
+body.aero-theme .project-page-grid section {
+  background: linear-gradient(180deg, #17293c 0%, #101c2a 60%, #0b141e 100%);
+  border: 1px solid #33587e;
+  border-top-color: #4d7aa8;
+  border-radius: 10px;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.15),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.6),
+    0 4px 0 rgba(0, 0, 0, 0.35),
+    0 8px 16px rgba(0, 0, 0, 0.45);
+}
+body.aero-theme .project-page-grid section { padding: 1.2rem 1.4rem; }
+
+body.aero-theme .project:hover,
+body.aero-theme .project[open] {
+  border-color: var(--accent);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    0 0 0 2px rgba(41, 182, 246, 0.4),
+    0 8px 18px rgba(0, 0, 0, 0.5);
+}
+
+body.aero-theme h2 {
+  border-left: 5px solid var(--accent);
+  text-shadow: 0 1px 0 #000;
+}
+
+body.aero-theme .skill-card h3 { text-shadow: 0 1px 0 #000; }
+
+/* Etiquettes en relief type "bouton de vieux logiciel" */
+body.aero-theme .tag {
+  background: linear-gradient(180deg, #24405c 0%, #16283c 100%);
+  border: 1px solid #3f6a94;
+  border-top-color: #5c8bb8;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 1px 0 #000;
+  border-radius: 5px;
+  color: var(--text-dim);
+}
+
+body.aero-theme .project-img {
+  border: 2px solid #33587e;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.6), 0 6px 14px rgba(0, 0, 0, 0.5);
+}
+
+body.aero-theme footer {
+  background: linear-gradient(180deg, rgba(9, 14, 22, 0), rgba(6, 10, 17, 0.8));
+  border-top: 1px solid #1c3a5c;
+}
+
+/* Bouton caché de bascule de theme, planque dans le footer */
+.theme-toggle {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-left: 0.6rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  vertical-align: middle;
+  cursor: pointer;
+  padding: 0;
+  transition: box-shadow 0.3s ease, background 0.3s ease, transform 0.2s ease;
+}
+.theme-toggle:hover {
+  background: radial-gradient(circle at 30% 30%, #e4ffe0, #4fd67a 60%, #1c8f38);
+  box-shadow: 0 0 10px rgba(79, 214, 122, 0.8);
+  transform: scale(1.3);
+}
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+body.aero-theme .theme-toggle {
+  width: 16px;
+  height: 16px;
+  background: radial-gradient(circle at 30% 30%, #e4ffe0, #4fd67a 55%, #1c8f38);
+  box-shadow: 0 0 8px rgba(79, 214, 122, 0.7);
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path d='M27 5C15 5 6 14 6 26c0-1 12-3 15-6 4-4 6-9 6-15z' fill='%23e8ffe0' stroke='%23186226' stroke-width='1.5' stroke-linejoin='round'/><path d='M25 7 9 23' stroke='%23186226' stroke-width='1.2' stroke-linecap='round'/></svg>");
+  background-size: 70%;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 4px;
+  border: none;
+}
+body.aero-theme .theme-toggle:hover {
+  transform: scale(1.4) rotate(-8deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .theme-toggle { transition: none; }
+}
